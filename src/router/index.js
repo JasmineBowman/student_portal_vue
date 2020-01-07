@@ -1,8 +1,13 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import Home from '../views/Home.vue';
+import About from "../views/About.vue";
+import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
+import ResumesEdit from "../views/ResumesEdit.vue";
+import ResumesShow from "../views/ResumesShow.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
@@ -17,13 +22,33 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
-]
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: Login
+  },
+  {
+    path: '/logout',
+    name: 'logout',
+    component: Logout
+  },
+  {
+    path: "/resumes/:id/edit",
+    name: "resumes_edit",
+    component: ResumesEdit
+  },
+  {
+    path: "/resumes_show/:id",
+    name: "resumes_show",
+    component: ResumesShow
+  },
+];
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
-})
+});
 
-export default router
+export default router;
