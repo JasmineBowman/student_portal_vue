@@ -4,8 +4,8 @@ import Home from '../views/Home.vue';
 import About from "../views/About.vue";
 import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
-import ResumesEdit from "../views/ResumesEdit.vue";
-import ResumesShow from "../views/ResumesShow.vue";
+import StudentEdit from "../views/StudentEdit.vue";
+import StudentShow from "../views/StudentShow.vue";
 
 Vue.use(VueRouter);
 
@@ -34,14 +34,14 @@ const routes = [
     component: Logout
   },
   {
-    path: "/resumes/:id/edit",
-    name: "resumes_edit",
-    component: ResumesEdit
+    path: "/student/:id/edit",
+    name: "student_edit",
+    component: StudentEdit
   },
   {
-    path: "/resumes_show/:id",
-    name: "resumes_show",
-    component: ResumesShow
+    path: "/student/:id",
+    name: "student_show",
+    component: StudentShow
   },
 ];
 
