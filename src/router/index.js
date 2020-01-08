@@ -6,6 +6,10 @@ import Login from "../views/Login.vue";
 import Logout from "../views/Logout.vue";
 import StudentEdit from "../views/StudentEdit.vue";
 import StudentShow from "../views/StudentShow.vue";
+import ExperienceEdit from "../views/ExperienceEdit.vue";
+import EducationEdit from "../views/EducationEdit.vue";
+import SkillsEdit from "../views/SkillsEdit.vue";
+import CapstoneEdit from "../views/CapstoneEdit.vue";
 
 Vue.use(VueRouter);
 
@@ -43,6 +47,26 @@ const routes = [
     name: "student_show",
     component: StudentShow
   },
+  {
+    path: "/experience/:id/edit",
+    name: "experience_edit",
+    component: ExperienceEdit
+  }, 
+  {
+    path: "/education/:id/edit",
+    name: "education_edit",
+    component: EducationEdit
+  },
+  {
+    path: "/skills/:id/edit",
+    name: "skills_edit",
+    component: SkillsEdit
+  }, 
+  {
+    path: "/capstone/:id/edit",
+    name: "capstone_edit",
+    component: CapstoneEdit
+  },  
 ];
 
 const router = new VueRouter({
